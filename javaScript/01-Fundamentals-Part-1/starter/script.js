@@ -74,5 +74,7 @@ console.log(ageSarah >= 18);
 --------------------------------------------------------
 */
 
-// 2.14 -  operators precedence
-
+// 2.17 -  Strings and Template Literals
+ const firstName = 'Joelsoon';
+ const job = 'Analista de sistema'";
+ const birthYear =  1982;
