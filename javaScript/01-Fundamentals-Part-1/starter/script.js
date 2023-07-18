@@ -75,6 +75,24 @@ console.log(ageSarah >= 18);
 */
 
 // 2.17 -  Strings and Template Literals
- const firstName = 'Joelsoon';
- const job = 'Analista de sistema'";
+date = new Date();
+year = date.getFullYear();
+
+ const firstName = 'Joelson';
+ const job = 'System Analyst';
  const birthYear =  1982;
+ const age = year - birthYear;
+
+ const joe = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job;
+
+ console.log(joe);
+
+ const jon = `I'm ${firstName}, a ${age} years old ${job}`; // template literals
+ console.log(jon);
+
+ const multiline = ` This is a 
+ Multiline comment. 
+ It was made using, 
+ template literals`;
+
+ console.log(multiline);
