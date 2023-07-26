@@ -72,7 +72,7 @@ console.log(ageJon > ageSarah);
 console.log(ageSarah >= 18);
 
 --------------------------------------------------------
-*/
+
 
 // 2.17 -  Strings and Template Literals
 date = new Date();
@@ -96,3 +96,27 @@ year = date.getFullYear();
  template literals`;
 
  console.log(multiline);
+
+ ----------------------------------------------------------------
+
+ */
+
+// 2.18 - Taking Decisions: if / else Statements
+
+const age = 15;
+
+if (age >= 18) {
+  console.log(`Sarah can start driving lessons 🚗.`);
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years 😢.`)
+}
+
+const birthYear = 2012;
+let century; 
+if(birthYear <= 2000){
+   century = 20;
+} else {
+   century = 21;
+}
+console.log(`Sarah was born in the ${century}th century.`);
