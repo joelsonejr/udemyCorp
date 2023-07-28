@@ -1,3 +1,21 @@
+/*
+
+2.11 - Data Types
+2.12 - Declare variables
+2.13 - Basic Operators
+2.17 - Strings and Template Literals
+2.18 - Taking Decisions: if / else Statements
+2.20 - Type Conversion (manually) and Coercion (conversion performed by JS automatically)
+2.21 - Truthy and Falsy Values
+2.22 - Equality Operators == vs === 
+
+*/
+
+// =================================================================
+
+
+
+
 /* 
 
 let js = 'amazing';
@@ -144,7 +162,7 @@ console.log('25' * '10'); //coertion to number
 console.log('25' / '10'); //coertion to number
 
 ----------------------------------------------------------------
- */
+
 
 //2.21 Truthy and Falsy Values
 
@@ -171,3 +189,27 @@ if(height) {
 } else {
   console.log(`Height is not defined`);
 }
+
+----------------------------------------------------------------
+
+
+//2.22 Equality Operators == vs === 
+
+const age = '18';
+
+//strict equality operator 
+if (age === 18) console.log(`you just became an adult (strict)`); //compare if they are exactly the same value and type.
+
+//loos equality operator 
+if (age == 18) console.log(`you just became an adult (loose)`); //compare if they are  the same value. It does type coersion. 
+
+const favorite = 21;
+
+if (favorite != 23) {
+  console.log(`It's not 23`);
+}
+
+----------------------------------------------------------------
+ */
+
+//2.23 Basic Boolean logic
