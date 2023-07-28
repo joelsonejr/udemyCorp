@@ -99,7 +99,7 @@ year = date.getFullYear();
 
  ----------------------------------------------------------------
 
- */
+
 
 // 2.18 - Taking Decisions: if / else Statements
 
@@ -120,3 +120,54 @@ if(birthYear <= 2000){
    century = 21;
 }
 console.log(`Sarah was born in the ${century}th century.`);
+
+----------------------------------------------------------------
+
+
+//2.20 Type Conversion (manually) and Coercion (conversion performed by JS automatically)
+
+//Conversion
+const inputYear = '1991';
+console.log(inputYear + 18);
+console.log(Number(inputYear)+18);
+
+console.log(String(23));
+
+//Coercion
+let testVar = ('I am ' + 40 + ' years old'); //coercion to string
+console.log(testVar);
+console.log(typeof testVar);
+
+console.log('40' - '10' - 3); //coertion to number 
+
+console.log('25' * '10'); //coertion to number
+console.log('25' / '10'); //coertion to number
+
+----------------------------------------------------------------
+ */
+
+//2.21 Truthy and Falsy Values
+
+//There are 5 falsy values: 0, '', undefined, null NaN. 
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean('Jon'));
+console.log(Boolean({}));
+console.log(Boolean(null));
+
+const money = 50;
+
+if (money) {
+  console.log(`Save some`);
+} else {
+  console.log(`You need to get a job`);
+}
+
+let height;
+
+if(height) {
+  console.log(`Height is defined as ${height}`);
+} else {
+  console.log(`Height is not defined`);
+}
