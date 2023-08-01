@@ -8,6 +8,7 @@
 2.20 - Type Conversion (manually) and Coercion (conversion performed by JS automatically)
 2.21 - Truthy and Falsy Values
 2.22 - Equality Operators == vs === 
+2.24 - Logical Operators   
 
 */
 
@@ -212,4 +213,21 @@ if (favorite != 23) {
 ----------------------------------------------------------------
  */
 
-//2.23 Basic Boolean logic
+//2.24 Logical Operators
+
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+// if (shouldDrive) {
+//   console.log(`Sarah is able to drive`);
+// } else {
+//   console.log(`Someone else should drive`);
+// }
+
+const isTired = true;
+console.log(shouldDrive && isTired);
