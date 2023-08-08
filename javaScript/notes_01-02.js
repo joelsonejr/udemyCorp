@@ -9,6 +9,8 @@
 2.21 - Truthy and Falsy Values
 2.22 - Equality Operators == vs === 
 2.24 - Logical Operators   
+2.26 - Switch statement
+2.27 - Statements and Expressions
 
 */
 
@@ -211,7 +213,7 @@ if (favorite != 23) {
 }
 
 ----------------------------------------------------------------
- */
+
 
 //2.24 Logical Operators
 
@@ -230,4 +232,80 @@ console.log(!hasDriversLicense);
 // }
 
 const isTired = true;
-console.log(shouldDrive && isTired);
+console.log(shouldDrive && !isTired);
+
+----------------------------------------------------------------
+
+// 2.26 Switch statement
+const day = 'banana';
+
+switch(day) {
+  case 'monday': // compares day to this value in a strict way.
+    console.log(`Plan course structure`);
+    console.log(`Go to coding meetup`);
+    break;
+  case 'tuesday': 
+    console.log(`Prepare videos`);
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log(`Code examples`);
+    break
+  case 'friday':
+    console.log(`Record videos`);
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log( `Rest`);
+  default:
+    console.log(`Unknown day provided`);
+}
+
+if (day === 'monday'){
+  console.log(`Plan course structure`);
+  console.log(`Go to coding meetup`);
+} else if (day === 'tuesday'){
+  console.log(`Prepare videos`);
+} else if ( day === 'wednesday' || day === 'thursday'){
+  console.log(`Code examples`);
+} else if (day === 'friday') {
+  console.log(`Record videos`);
+} else if (day === 'saturday' || day === 'sunday'){
+  console.log( `Rest`);
+} else {
+  console.log(`Not a valid week day`);
+}
+
+----------------------------------------------------------------
+
+
+// 2.27 - Statements and Expressions
+
+// Expression is a piece of code tha produces value. 
+3 + 4;
+1991;
+true && false && !false;
+
+// Statement is a big piece of code, that is executed, and doesn't produce a value on it self.
+if (23 > 10) {
+  const str = '23 is bigger';
+}
+//the if block above is an example of statement
+
+----------------------------------------------------------------
+
+ */
+
+//2.28 - The Coditional (ternary) Operator
+
+const age = 18;
+
+age >= 28 ? console.log(`You're old`) : console.log (`You're young`);
+
+const drink = age >= 18 ? 'wine 🍷' : 'water 🚰';
+console.log(drink);
+
+//The ternary operator produces a value, then it's an expression. So, it can be used
+// wherever an exprection is acceptable.
+
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 🚰'}.`);
