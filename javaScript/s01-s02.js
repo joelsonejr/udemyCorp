@@ -11,6 +11,7 @@
 2.24 - Logical Operators   
 2.26 - Switch statement
 2.27 - Statements and Expressions
+2.28 - The Coditional (ternary) Operator
 
 */
 
@@ -294,7 +295,7 @@ if (23 > 10) {
 
 ----------------------------------------------------------------
 
- */
+ 
 
 //2.28 - The Coditional (ternary) Operator
 
@@ -309,3 +310,5 @@ console.log(drink);
 // wherever an exprection is acceptable.
 
 console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 🚰'}.`);
+
+*/
