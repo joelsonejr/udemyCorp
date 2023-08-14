@@ -1,8 +1,8 @@
 /*
 SUMMARY
 
-3.31 - Strict Mode
-3.32 - Functions
+3.32 - Strict Mode
+3.33 - Functions
 
 
 ------------------------------------------------------------------------------
@@ -10,7 +10,7 @@ SUMMARY
 NOTES:
 
 
-//3.31 Strict Mode
+//3.32 Strict Mode
 
 'use strict';
 
@@ -29,9 +29,9 @@ const interface = 'Audio';
 
 ------------------------------------------------------------------------------
 
-*/
 
-//3.32 - Functions
+
+//3.33 - Functions
 
 function logger() {
   console.log(`This is a function`);
@@ -55,3 +55,9 @@ console.log(appleJuice);
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
+
+------------------------------------------------------------------------------
+
+*/
+
+// 3.34 - Function Declaration vs. Expressions
