@@ -58,6 +58,72 @@ console.log(appleOrangeJuice);
 
 ------------------------------------------------------------------------------
 
-*/
+
 
 // 3.34 - Function Declaration vs. Expressions
+
+//function declaration
+'use strict';
+
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1982);
+
+
+//function expression or anonymous function 
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+}
+
+const age2 = calcAge2(1981);
+
+console.log(age1, age2);
+
+------------------------------------------------------------------------------
+
+
+// 3.35 - Arrow Functions
+
+//one liner arrow function does the return implicitilly. 
+const calcAge3 = birthYear => 2037 - 1982;
+
+const age3 = calcAge3(1982);
+console.log(age3);
+
+const yearUntilRetirement = birthYear => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+
+  return retirement;
+}
+
+const yearUntilRetirementOfAPerson = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+
+  return `${firstName} retires in ${retirement} years`;
+}
+console.log(yearUntilRetirementOfAPerson(1982, 'Joelson'));
+
+------------------------------------------------------------------------------
+
+*/
+
+// 3.36 - Functions Calling Another Functions
+
+const cutPieces = fruit => fruit * 4;
+
+const fruitProcessor = (apples, oranges) => {
+
+  const applePieces = cutPieces(apples);
+  const orangePieces = cutPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and 
+  ${orangePieces} pieces of orange.`;
+
+  return juice;
+}
+
+console.log(fruitProcessor(2,3));
