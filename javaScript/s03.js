@@ -109,7 +109,7 @@ console.log(yearUntilRetirementOfAPerson(1982, 'Joelson'));
 
 ------------------------------------------------------------------------------
 
-*/
+
 
 // 3.36 - Functions Calling Another Functions
 
@@ -127,3 +127,36 @@ const fruitProcessor = (apples, oranges) => {
 }
 
 console.log(fruitProcessor(2,3));
+
+--------------------------------------------------------
+
+
+// 3.37 - Reviewing Functions
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+}
+
+const calcRetirement = function (age) {
+  timeToRetire = 65 - age;
+  if (timeToRetire > 0) {
+    return timeToRetire;
+  } else {
+    return -1
+  }
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = calcRetirement(age);
+
+  if (retirement > 0){
+    return `${firstName} retires in ${retirement} years`;
+  } else{
+    return `${firstName} has already retired!!!!`;
+  }
+}
+
+console.log(yearsUntilRetirement(1950, 'Joe'));
+----------------------------------------------------------------
+
+*/
