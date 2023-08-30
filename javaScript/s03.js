@@ -89,6 +89,9 @@ console.log(age1, age2);
 //one liner arrow function does the return implicitilly. 
 const calcAge3 = birthYear => 2037 - 1982;
 
+//It was used a variable to store the function. 
+// the structure is: Parameter(s) => code. 
+
 const age3 = calcAge3(1982);
 console.log(age3);
 
