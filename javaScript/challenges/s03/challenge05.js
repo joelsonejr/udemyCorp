@@ -1,4 +1,4 @@
-/*
+
 const calcAverage = (score01, score02, score03) => (score01 + score02 + score03) / 3;
 
 const scoreDolphins = calcAverage(44, 23, 71);
@@ -19,22 +19,5 @@ function checkWinner(avgDolphins, avgKoalas){
 }
 
 checkWinner(scoreDolphins, scoreKoalas);
-*/
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
-
-const scoreDolphins = calcAverage();
-const scoreKoalas = calcAverage();
-
-const checkWinner = function (avgDolphins, avgKoalas) {
-    if (avgDolphins >= 2 * avgKoalas) {
-        console.log(`Dolphins win (${scoreDolphins} vs. ${scoreKoalas}) `);
-    } else if (avgKoalas >= 2 * avgDolphins) {
-        console.log(`Koalas win (${scoreKoalas} vs. ${scoreDolphins})`);
-    } else {
-        console.log(`No team wins ...`);
-    }
-}
-
-checkWinner(scoreDolphins, scoreKoalas);
 

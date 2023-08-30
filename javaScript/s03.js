@@ -163,3 +163,28 @@ console.log(yearsUntilRetirement(1950, 'Joe'));
 ----------------------------------------------------------------
 
 */
+
+//3.39 Introduction to Arrays
+
+const friends = ['Janice', 'Penny', 'Amy'];
+
+
+const years = new Array(1992, 1982, 2000, 2009);
+console.log(years);
+
+console.log(friends);
+console.log(friends[1]);
+console.log(friends.length);
+console.log(friends[friends.length -1]);
+
+friends[2] = 'Nicky';
+console.log(friends);
+
+const joe = ['Joelson', 'Junior', 2023 - 1982, 'analyst', friends];
+console.log(joe)
+
+//exercise
+const calcAge =  birthYear => 2037 - birthYear;
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length-1])];
+console.log(`Ages: ${ages}`);
