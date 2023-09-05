@@ -162,7 +162,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 console.log(yearsUntilRetirement(1950, 'Joe'));
 ----------------------------------------------------------------
 
-*/
+
 
 //3.39 Introduction to Arrays
 
@@ -188,3 +188,36 @@ const calcAge =  birthYear => 2037 - birthYear;
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length-1])];
 console.log(`Ages: ${ages}`);
+---------------------------------------------------------------------------
+
+*/
+
+// 3.40 - Basic Array Operations
+
+'use strict';
+
+//add elements
+const friends = ['Janice', 'Penny', 'Amy'];
+let newLength = friends.push('Loren'); //add an item to the end of the array. push returns the length of the array
+
+console.log(friends);
+console.log(newLength);
+
+newLength = friends.unshift('Cassie'); //adds an item in the beginning of the array. 
+console.log(friends);
+console.log(newLength);
+
+//remove elements
+const popped = friends.pop(); // removes the last element. It returns the removed element.
+console.log(friends);
+console.log(popped);
+
+friends.shift(); // removes the first element.
+console.log(friends);
+
+//position
+friends.indexOf('Penny') // returns the position of the element
+
+console.log(friends.indexOf('Penny')); //it returns '-1' when the searched element doesn't exist.
+
+console.log(friends.includes('Amy')); // returns 'true' if the element is in the array. Returns 'false' otherwise. It's a strict comparison. 
