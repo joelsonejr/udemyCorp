@@ -190,7 +190,7 @@ const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length-1
 console.log(`Ages: ${ages}`);
 ---------------------------------------------------------------------------
 
-*/
+
 
 // 3.40 - Basic Array Operations
 
@@ -221,3 +221,50 @@ friends.indexOf('Penny') // returns the position of the element
 console.log(friends.indexOf('Penny')); //it returns '-1' when the searched element doesn't exist.
 
 console.log(friends.includes('Amy')); // returns 'true' if the element is in the array. Returns 'false' otherwise. It's a strict comparison. 
+
+------------------------------------------------------------------------------------
+
+
+
+//3.42 Introduction to Objects
+
+const itadori = {
+  firstName: 'Yuuji',
+  lastName: 'Itadori',
+  age: 2023 - 1997,
+  job: 'Jujutsu Shi',
+  friends: ['Gojou', 'Fusiguro', 'Kugisaki']
+};
+
+---------------------------------------------------------
+
+*/
+
+//3.43 Dot vs Bracket Notation
+const itadori = {
+  firstName: 'Yuuji',
+  lastName: 'Itadori',
+  age: 2023 - 1997,
+  job: 'Jujutsu Shi',
+  friends: ['Toudou', 'Gojou', 'Fusiguro', 'Kugisaki']
+};
+
+console.log(itadori.lastName);
+console.log(itadori['firstName']); //using brackets we can use an expression to retrieve values from the objetc 
+
+const nameKey = 'Name';
+
+console.log(itadori['first' + nameKey]);
+console.log(itadori['last' + nameKey]);
+
+console.log(`${itadori['last' + nameKey]} ${itadori['first' + nameKey]}`);
+
+//Adding new properties to an object
+
+itadori.location = 'Japan';
+itadori['jutsushikiTenkai'] = 'unknow technique';
+itadori.amountOfFriends = itadori.friends.length;
+
+console.log(
+  `${itadori['first' + nameKey]} has ${itadori.amountOfFriends} friends, and his best friend is called ${itadori.friends[0]}. `
+)
