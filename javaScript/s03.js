@@ -238,7 +238,7 @@ const itadori = {
 
 ---------------------------------------------------------
 
-*/
+
 
 //3.43 Dot vs Bracket Notation
 const itadori = {
@@ -267,4 +267,51 @@ itadori.amountOfFriends = itadori.friends.length;
 
 console.log(
   `${itadori['first' + nameKey]} has ${itadori.amountOfFriends} friends, and his best friend is called ${itadori.friends[0]}. `
-)
+) 
+
+-----------------------------------------------------------------
+*/
+
+// 3.44 Object Methods
+
+const itadori = {
+  firstName: 'Yuuji',
+  lastName: 'Itadori',
+  pronoun: 'he',
+  birthYear: 1997,
+  job: 'Jujutsu Shi',
+  friends: ['Gojou', 'Fusiguro', 'Kugisaki'],
+  hasDriversLicence: false,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // }
+
+  // calcAge: function() {
+  //   return 2037 - this.birthYear; //this is pointing to the object wich is calling the function.
+  // }
+
+  calcAge: function() {
+    this.age =  2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function() {
+    // if (this.hasDriversLicence == true) {
+    //     license = "has a driver's license";
+    // } else {
+    //   license = "has no driver's license";
+    // }
+
+    license = this.hasDriversLicence ? 'a' : 'no'; 
+
+    this.info = `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and ${this.pronoun} has ${license} drivers license.`;
+
+    return this.info;
+  }
+
+};
+
+console.log(itadori.calcAge(1997));
+console.log(itadori['calcAge'](1997));
+console.log(itadori.getSummary());
