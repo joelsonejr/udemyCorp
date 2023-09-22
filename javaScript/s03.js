@@ -273,6 +273,7 @@ console.log(
 */
 
 // 3.44 Object Methods
+'use strict';
 
 const itadori = {
   firstName: 'Yuuji',
@@ -283,6 +284,10 @@ const itadori = {
   friends: ['Gojou', 'Fusiguro', 'Kugisaki'],
   hasDriversLicence: false,
 
+  calcAge: function() {
+    this.age =  2037 - this.birthYear;
+    return this.age;
+
   // calcAge: function (birthYear) {
   //   return 2037 - birthYear;
   // }
@@ -291,9 +296,7 @@ const itadori = {
   //   return 2037 - this.birthYear; //this is pointing to the object wich is calling the function.
   // }
 
-  calcAge: function() {
-    this.age =  2037 - this.birthYear;
-    return this.age;
+
   },
 
   getSummary: function() {
@@ -315,3 +318,4 @@ const itadori = {
 console.log(itadori.calcAge(1997));
 console.log(itadori['calcAge'](1997));
 console.log(itadori.getSummary());
+console.log(itadori);
